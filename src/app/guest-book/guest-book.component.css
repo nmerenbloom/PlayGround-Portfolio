@@ -1,0 +1,9 @@
+.form-group.required label:after {
+  content:" *";
+  font-weight: bold;
+  color:red;
+}
+
+#parchment {
+  background-image: url('../../assets/parchment.jpg');
+}
