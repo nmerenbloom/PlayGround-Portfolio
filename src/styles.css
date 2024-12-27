@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input.ng-touched.ng-invalid {
+  border-left: 5px solid red;
+}
+
+input.ng-touched.ng-valid {
+  border-left: 5px solid green;
+}
+
+@media (max-width: 795px) {
+  h3{
+    text-align: center;
+  }
+}

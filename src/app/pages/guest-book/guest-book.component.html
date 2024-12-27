@@ -6,19 +6,20 @@
       <form #f="ngForm" (ngSubmit)="addGuest()">
         <div class="form-group required">
           <label class="" for="guest">Guest Name</label>
-          <input required class="form-control" ngModel name="guest" type="text">
+          <input autocomplete="off" required class="form-control" ngModel name="guest" type="text">
         </div>
         <div class="form-group">
           <label for="comment">Comment</label>
-          <textarea class="form-control" ngModel name="comment" type="text"
-            rows="1" placeholder="Leave a comment for Noah... (Optional)"></textarea>
+          <textarea class="form-control" ngModel name="comment" type="text" rows="1"
+            placeholder="Leave a comment for Noah... (Optional)"></textarea>
         </div>
         <button [disabled]="!f.valid" class="btn btn-outline-success" type="submit">Sign Guest Book</button>
       </form>
       <hr>
       <div style="margin: auto; margin-top: 1.2rem;" class="row">
         <div class="alert alert-primary">
-          <b>Note:</b> Entries are stored on a backend server powered by Firebase and will be visible to all PlayGround visitors
+          <b>Note:</b> Entries are stored on a backend server powered by Firebase and will be visible to all PlayGround
+          visitors
         </div>
       </div>
 
