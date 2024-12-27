@@ -28,7 +28,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
     "bootstrap": "^4.4.0",
+    "express": "^4.17.2",
+    "jquery": "^3.6.0",
+    "nvm": "0.0.4",
     "rxjs": "~6.5.4",
+    "site-monitor": "^0.3.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
@@ -52,5 +56,8 @@
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

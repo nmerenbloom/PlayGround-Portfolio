@@ -1,7 +1,8 @@
 
 .contact__container {
   display: flex;
-  margin: 2rem auto;
+  justify-content: space-between;
+  /* margin: auto 1.5rem; */
 }
 
 .contact__box {
@@ -9,16 +10,10 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding-right: 1.75rem;
-}
-
-#contact__icons {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
 }
 
 img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 fa-icon {
@@ -26,17 +21,9 @@ fa-icon {
   margin: auto;
 }
 
-@media only screen and (max-width: 992px) {
- .container {
-   max-width: 800px;
- }
-}
-
-@media only screen and (max-width: 767px) {
+@media (max-width: 950px) {
   .contact__container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 

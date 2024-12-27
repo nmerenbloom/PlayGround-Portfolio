@@ -1,0 +1,22 @@
+<!-- https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections -->
+
+<div class="wavy__container">
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 150px; width: 100%;">
+    <path
+      [ngStyle]="{'fill': fill_color}"
+      d="M0.00,49.99 C258.08,207.40 264.29,-55.09 501.31,88.98 L500.00,150.00 L0.00,150.00 Z">
+    </path>
+  </svg>
+
+  <div [ngStyle]="{'background-color': fill_color}">
+    <ng-content ></ng-content>
+  </div>
+
+
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 150px; width: 100%;">
+    <path
+      [ngStyle]="{'fill': fill_color}"
+      d="M0.00,49.99 C196.01,165.95 271.49,-49.99 500.00,49.99 L500.00,-0.00 L0.00,-0.00 Z">
+    </path>
+  </svg>
+</div>

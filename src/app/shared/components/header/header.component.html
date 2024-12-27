@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <!-- <div class="container-fluid"> -->
+  <a class="navbar-brand" href="#"><img src="assets/tonka truck.jpg" width="35" height="30" alt=""></a>
+  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    &#9776;
+  </button>
+  <!-- <div class="navbar-header">
+    <a routerLink="/" class="navbar-brand">
+      <img src="assets/tonka truck.jpg" width="35" height="30" alt="">
+    </a>
+  </div> -->
+  <!-- <div *ngIf="isMobile"> -->
+    <!-- [@expandCollapse]="isMenuCollapsed ? 'closed' : 'open'" -->
+  <div [ngbCollapse]="isMenuCollapsed"   class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li routerLinkActive="active" class="nav-item">
+        <a routerLink="/contact-info" class="nav-link">Contact & Resume</a>
+      </li>
+      <div routerLinkActive="active" class="nav-item">
+        <a routerLink="/guest-book" class="nav-link">Guest Book</a>
+      </div>
+
+      <div ngbDropdown routerLinkActive="active" class="nav-item d-inline-block">
+        <a class="nav-link" id="dropdownBasic1" ngbDropdownToggle>Tools</a>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button (click)="isMenuCollapsed = true" routerLink="/directions" ngbDropdownItem>Directions</button>
+          <button (click)="isMenuCollapsed = true" routerLink="/price-markup" ngbDropdownItem>Price Markup</button>
+          <button (click)="isMenuCollapsed = true" routerLink="/next-bus" ngbDropdownItem>Next Bus <b>(New!)</b></button>
+        </div>
+      </div>
+      <div routerLinkActive="active" class="nav-item">
+        <a  routerLink="/auth" class="nav-link">Authenticate</a>
+      </div>
+    </ul>
+
+  </div>
+
+  <!-- </div> -->
+
+</nav>

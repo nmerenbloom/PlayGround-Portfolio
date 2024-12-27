@@ -1,0 +1,41 @@
+<div class="container">
+  <h3>Next Bus Tool</h3>
+  <p>This tool is for the regular patron of the WMATA Metrobus stop at <b>7th St. and G St. SW</b>.
+    It gives the user a list of all upcoming arrivals. It consumes the WMATA <a  target="_blank" href="https://developer.wmata.com/docs/services/5476365e031f590f38092508/operations/5476365e031f5909e4fe331d?">Public API</a>.</p>
+   <div class=" pl-0 col-lg-4">
+     <div class='alert alert-warning'>Currently using demo API Key</div >
+   </div>
+
+  <hr>
+  <div class="row">
+    <div class="col-lg-8">
+
+      <div class="row">
+        <div class="col-lg-10">
+
+          <p class='ml-2'><u><b>{{stopName}}</b></u></p>
+          <div class='d-flex'>
+            <div *ngFor='let a of arrivals' class="d-flex mx-2 flex-column shadow w-25 p-2 rounded">
+              <p class="h2 mb-0">{{a.RouteID ? a.RouteID : 0}}</p>
+              <small class="text-muted mt-0 mb-2">{{a.DirectionText}}</small>
+              <p class="display-6">{{a.Minutes}} minutes</p>
+            </div>
+          </div>
+
+          <div *ngIf='arrivals.length === 0 && !isLoading' class="alert alert-danger">
+            No upcoming arrivals per WMATA API.
+          </div>
+          <div *ngIf='showError && !isLoading' class="alert alert-danger">
+            {{errorMessage}}
+          </div>
+          <app-loading-spinner *ngIf="isLoading" class="text-center"></app-loading-spinner>
+          <p *ngIf='!isLoading' class='ml-2 mt-2'>Last updated: {{lastUpdated}}</p>
+          <br><br><br>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

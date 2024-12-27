@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, OnChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalBasicComponent } from '../modal-basic/modal-basic.component';
+import { ModalBasicComponent } from '../../shared/components/modal-basic/modal-basic.component';
 import { map } from 'rxjs/operators';
 
 @Component({

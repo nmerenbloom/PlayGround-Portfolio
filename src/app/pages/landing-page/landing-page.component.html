@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="">
+    <h3>Welcome to the PlayGround 1.2.0</h3>
+    <p class="lead">On this page, you can engage with some of the personal and academic projects I have been working
+      on.
+      Make sure to check out the rest of the PlayGround, and sign the <a routerLink="guest-book">Guest Book</a> too!
+      And try the <a routerLink="next-bus"><b>NEW</b> 'WMATA Next Bus' tool</a>. This Angular app also features:
+    </p>
+    <div class="ml-4">
+      <li>Responsive design for an excellent UX on devices of all sizes</li>
+      <li>RESTful API Consumption</li>
+      <li>Geolocation</li>
+      <li>Hosting on Firebase</li>
+    </div>
+
+    <hr>
+  </div>
+
+  <div class="card-columns">
+    <div *ngFor="let c of cards" id="contactCard" class="card text-center w-100">
+      <img class="card-img-top" src={{c.imgPath}} alt="github">
+      <div class="card-body">
+        <h5 class="card-title">{{c.title}}</h5>
+        <p class="lead">{{c.desc}} <b *ngIf="c.boldText">{{c.boldText}}</b>
+        </p>
+        <a class="btn btn-primary" target="_blank" href="{{c.href}}">{{c.buttonText}}</a>
+      </div>
+    </div>
+  </div>
+
+
+</div>

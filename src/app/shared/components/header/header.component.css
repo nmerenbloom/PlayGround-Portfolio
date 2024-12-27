@@ -1,0 +1,33 @@
+
+.nav-container {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid #d3d3d3;
+  display: flex;
+}
+
+#dropdownBasic1:hover {
+  cursor: pointer;
+  color: #0371e6;
+}
+
+#dropdownBasic1 {
+  color: #007bff;
+}
+
+.active {
+  /* background-color: rgb(223, 222, 222); */
+  border-bottom: 2px solid #babbbb;
+}
+
+@media (max-width: 500px) {
+  .nav-container {
+    border-bottom: 1px solid #d3d3d3;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  }
+
+
